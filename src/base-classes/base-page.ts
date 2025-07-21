@@ -11,6 +11,8 @@ export class BasePage extends BaseElement {
     }
 
     async open() {
-        await this.page.goto(this.url);
+        await this.page.goto(this.url, {
+            waitUntil: 'networkidle',
+        });
     }
 }
