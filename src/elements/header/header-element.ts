@@ -65,4 +65,8 @@ export class HeaderElement extends BaseElement {
     async openAboutDropdown() {
         await this.getAboutButton().hover();
     }
+
+    async openBookDemoPage(){
+        await this.bookDemoButton.click();
+    }
 }

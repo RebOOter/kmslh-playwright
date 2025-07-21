@@ -17,6 +17,13 @@ export class ExpectedHelper {
         }
     }
 
+    static async expectedAllHaveText(locator: Locator, text: string) {
+        const count = await locator.count();
+        for (let i = 0; i < count; i++) {
+            await expect(locator.nth(i)).toHaveText(text);
+        }
+    }
+
     static async expectedAllHaveLinks(locator: Locator, links: string[]) {
         const count = await locator.count();
         for (let i = 0; i < count; i++) {
