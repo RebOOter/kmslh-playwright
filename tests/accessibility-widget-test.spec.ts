@@ -11,7 +11,8 @@ test('Check that accessibility widget has default values', async ({page}) => {
     await expect(mainPage.accessibilityWidget.togglersDivs).toHaveCount(8);
 });
 
-test('Check that link highlighing is working', async ({page}) => {
+// By the way, Playwright does better work here than Selenium :D
+test('Check that link highlighting is working', async ({page}) => {
     const mainPage = new MainPage(page);
     await mainPage.open();
 
